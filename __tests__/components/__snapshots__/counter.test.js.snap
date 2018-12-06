@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders counter renders counter with no unfinished tasks 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#F5FCFF",
+      "fontSize": 25,
+      "fontWeight": "bold",
+    }
+  }
+>
+  You have nothing to do! You did all of it! ⭐️
+</Text>
+`;
+
+exports[`it renders counter renders counter with unfinished tasks 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#F5FCFF",
+      "fontSize": 25,
+    }
+  }
+>
+  You Have 
+  1
+   task(s) remaining!
+</Text>
+`;
