@@ -10,23 +10,13 @@ const todosReducers = (state = INITIAL_STATE, action) => {
                 action.item
             ]
         case DELETE:
-            _.remove(state, function(task) {
-                return task.id === action.id
-            })
-            return [
-                ...state
-            ]
+            return state.filter(todo => todo.id !== action.id)
         case EDIT:
-            state.splice(action.item.index, 1, action.task)
-            return [
-                ...state
-            ]
+            let task = action.task.name
+            return state.map(todo => todo.id === action.item.id ? {...todo, name: task } : todo)
         case TOGGLE:
             let item = action.item.item
-            state.splice(action.item.index, 1, {...item, completed: !item.completed })
-            return [
-                ...state
-            ]
+            return state.map(todo => todo.id === item.id ? {...todo, completed: !item.completed } : todo)
         default:
             return state
     }

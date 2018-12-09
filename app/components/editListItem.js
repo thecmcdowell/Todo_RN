@@ -18,8 +18,8 @@ class EditItem extends React.Component {
   editTask = () => {
     let item = this.props.item.item;
     let updatedItem = {
-      name: this.state.text,
       id: item.id,
+      name: this.state.text,
       completed: item.completed
     };
     this.props.editTodo(item, updatedItem);
@@ -84,7 +84,7 @@ class EditItem extends React.Component {
                   />
                   <Button
                     disabled={this.state.text === ""}
-                    title="Edit Task"
+                    title="Save"
                     onPress={() => this.editTask()}
                     color="#a1fd9c"
                   />
@@ -94,9 +94,7 @@ class EditItem extends React.Component {
                   title={completed ? `Didn't finish?` : "Completed?"}
                   onPress={() => this.toggleComplete()}
                 />
-              </View>
-              <View>
-                <Button
+                                <Button
                   color="#a1fd9c"
                   title="Delete"
                   onPress={() => this.deleteTask()}

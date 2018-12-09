@@ -1,15 +1,9 @@
 import * as actions from './types'
 
-import _ from 'lodash'
-
-export const addTodo = (name) => {
+export const addTodo = (item) => {
     return {
         type: actions.ADD,
-        item: {
-            id: _.uniqueId('todo_'),
-            name,
-            completed: false
-        }
+        item
     }
 }
 
