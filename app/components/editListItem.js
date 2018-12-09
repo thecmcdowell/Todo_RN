@@ -62,12 +62,7 @@ class EditItem extends React.Component {
                 >
                   {item.name}
                 </Text>
-                <Text
-                  style={[
-                    styles.status,
-                    {fontSize: 15}
-                  ]}
-                >
+                <Text style={[styles.status, { fontSize: 15 }]}>
                   {completed ? (
                     <Text>Completed!</Text>
                   ) : (
@@ -94,7 +89,7 @@ class EditItem extends React.Component {
                   title={completed ? `Didn't finish?` : "Completed?"}
                   onPress={() => this.toggleComplete()}
                 />
-                                <Button
+                <Button
                   color="#a1fd9c"
                   title="Delete"
                   onPress={() => this.deleteTask()}
@@ -121,7 +116,7 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 10,
     width: 150,
-    backgroundColor: "white",
+    backgroundColor: "white"
   },
   main: {
     backgroundColor: "#88d6f2"

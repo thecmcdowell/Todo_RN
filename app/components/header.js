@@ -4,9 +4,11 @@ import { Text, View } from "react-native";
 const Header = () => {
   return (
     <View style={style.header}>
-    <View>
-      <Text style={style.text}> Greens are finished! Blues aren't finshed 😟</Text>
-      <Text style={style.text}> Tap on an item to see your options</Text>
+      <View>
+        <Text style={style.text}>
+          Greens are finished! Blues aren't finshed 😟
+        </Text>
+        <Text style={style.text}> Tap on an item to see your options</Text>
       </View>
     </View>
   );
@@ -23,4 +25,4 @@ const style = {
   }
 };
 
-export default Header
+export default Header;

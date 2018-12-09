@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
     height: 30,
     borderColor: "gray",
     borderWidth: 0.5,
-    borderRadius:10,
+    borderRadius: 10,
     minWidth: "90%",
     marginBottom: 10
   },
   text: {
-    alignSelf: 'center',
-    color: '#F5FCFF'
+    alignSelf: "center",
+    color: "#F5FCFF"
   }
 });
 

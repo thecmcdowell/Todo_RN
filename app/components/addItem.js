@@ -2,7 +2,7 @@ import React from "react";
 import { TextInput, Button, View, StyleSheet } from "react-native";
 import { connect } from "react-redux";
 import { addTodo } from "../actions/todoActions";
-import _ from 'lodash'
+import _ from "lodash";
 
 class AddTask extends React.Component {
   state = {
@@ -12,10 +12,10 @@ class AddTask extends React.Component {
   addTask = () => {
     if (this.state.text !== "") {
       let item = {
-        id: _.uniqueId('todo_'),
+        id: _.uniqueId("todo_"),
         name: this.state.text,
         completed: false
-      }
+      };
       this.props.addTodo(item);
       this.setState({ data: this.state.todos });
       this.setState({ text: "" });
@@ -36,8 +36,8 @@ class AddTask extends React.Component {
         <Button
           onPress={this.addTask.bind(this, this.state.text)}
           title="Add Task"
-          color= "#a1fd9c"
-          disabled={this.state.text ? false: true}
+          color="#a1fd9c"
+          disabled={this.state.text ? false : true}
         />
       </View>
     );

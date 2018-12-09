@@ -69,12 +69,10 @@ class ToDo extends React.Component {
     }
   };
 
-  
-
   render() {
     let todos = this.props.todos;
     // idHelp needed because items that currently exsist may have same id as items we create
-    let idHelp = 0
+    let idHelp = 0;
     return (
       <SafeAreaView style={styles.view}>
         <StatusBar barStyle="light-content" backgroundColor="#4F6D7A" />
@@ -104,7 +102,7 @@ class ToDo extends React.Component {
             renderItem={this.renderFlatListItem}
             data={todos}
             extraData={this.state}
-            keyExtractor={(index) => `${index.id} + ${idHelp++}`}
+            keyExtractor={index => `${index.id} + ${idHelp++}`}
             style={styles.list}
           />
           <AddTask />
