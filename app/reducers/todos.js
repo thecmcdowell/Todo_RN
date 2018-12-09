@@ -1,5 +1,4 @@
 import { ADD, DELETE, EDIT, TOGGLE, SHOW_COMPLETED, SHOW_INCOMPLETE, SHOW_ALL } from '../actions/types'
-import _ from 'lodash'
 
 const INITIAL_STATE = []
 const todosReducers = (state = INITIAL_STATE, action) => {
