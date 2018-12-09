@@ -12,11 +12,7 @@ describe("todoActions test", () => {
             const name = "Test";
             const expectedOutcome = {
                 type: ADD,
-                item: {
-                    id: "todo_1",
-                    name,
-                    completed: false
-                }
+                item: 'Test'
             };
             expect(actions.addTodo(name)).toEqual(expectedOutcome);
         }),
