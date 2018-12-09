@@ -2,7 +2,6 @@ import React from "react";
 import { TextInput, Button, View, StyleSheet } from "react-native";
 import { connect } from "react-redux";
 import { addTodo } from "../actions/todoActions";
-import _ from "lodash";
 
 class AddTask extends React.Component {
   state = {
@@ -12,7 +11,7 @@ class AddTask extends React.Component {
   addTask = () => {
     if (this.state.text !== "") {
       let item = {
-        id: _.uniqueId("todo_"),
+        id: Math.random(),
         name: this.state.text,
         completed: false
       };
