@@ -1,6 +1,7 @@
 #ToDo App
 A basic CRUD ToDo app that also saves data to device storage
 
+![alt text](./Screenshot.png)
 ### Run This App
 #### Ensure you have all dependencies installed:
 ```
